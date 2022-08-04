@@ -37,4 +37,6 @@ yields:
     ABYSSAL0HORRORS
     THETOWERING4STARS
 
+and thus the code is:
+    
     3804
