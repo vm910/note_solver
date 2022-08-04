@@ -9,7 +9,7 @@ Attempts to solve the note cipher in Underrail.
     
 Make sure the cipher file is formatted in the following way:
 
-    [octave keys (cut the first 3 numbers from the number sequences)]
+    [octaves (cut the first 3 numbers from the number sequences)]
     [interval keyes (with or without the dot in the end, doesn't matter)]
     [octave key sequence 1]
     [octave key sequence 2]
