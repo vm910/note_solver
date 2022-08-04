@@ -8,6 +8,7 @@ Attempts to solve the note cipher in Underrail.
     python note_solver.py <path_to_file>
     
 Make sure the cipher file is formatted in the following way:
+
     [octave keys (cut the first 3 numbers from the number sequences)]
     [interval keyes (with or without the dot in the end, doesn't matter)]
     [octave key sequence 1]
@@ -22,6 +23,8 @@ Make sure the cipher file is formatted in the following way:
 ## Example
     python note_solver.py .\examples\cipher.txt
 
+the cipher.txt file looks like this:
+
     603
     perfect fifth, minor second, perfect fifth.
     66761176717166001167776
@@ -33,11 +36,13 @@ Make sure the cipher file is formatted in the following way:
     GAbDDDGGb E DBbC#C#BbC#D
     D#DB D#BbGbBC#D#AC# Ab DD#GC#D
 
-yields:
+the decoded song names:
+
     CELESTIALTHREENOSTALGIA
     POLYCHROMATICEIGHTWATERSCAPES
     ABYSSAL0HORRORS
     THETOWERING4STARS
 
-and thus the code is:   
+and thus the code is:
+
     3804
