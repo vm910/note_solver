@@ -1,10 +1,13 @@
 # Note cipher solver
 Attempts to solve the note cipher in Underrail.
+
+## Requirements
+    python3.9.2
+
 ## Usage
     python note_solver.py <path_to_file>
     
 Make sure the cipher file is formatted in the following way:
-
     [octave keys (cut the first 3 numbers from the number sequences)]
     [interval keyes (with or without the dot in the end, doesn't matter)]
     [octave key sequence 1]
@@ -31,12 +34,10 @@ Make sure the cipher file is formatted in the following way:
     D#DB D#BbGbBC#D#AC# Ab DD#GC#D
 
 yields:
-
     CELESTIALTHREENOSTALGIA
     POLYCHROMATICEIGHTWATERSCAPES
     ABYSSAL0HORRORS
     THETOWERING4STARS
 
-and thus the code is:
-    
+and thus the code is:   
     3804
