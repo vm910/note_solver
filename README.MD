@@ -2,7 +2,7 @@
 Attempts to solve the note cipher in Underrail.
 
 ## Requirements
-    python3.9.2
+    python3.9.2 or above
 
 ## Usage
     python note_solver.py <path_to_file>
