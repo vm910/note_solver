@@ -3,6 +3,7 @@ import string
 import sys
 
 def set_notes(raw_notes):
+
     notes = []
     i = 0
 
@@ -25,6 +26,7 @@ def find_index(octaves, octave):
     return remainders.index(min(remainders))
 
 def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
+    
     notes_map = { 
         "C"  : 0, 
         "C#" : 1, 
@@ -44,6 +46,7 @@ def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
         "Bb" : 10, 
         "B"  : 11 
     }
+    
     decrypted = []
 
     for notes, octave_key in zip(cipher_notes, cipher_octaves):
@@ -60,6 +63,7 @@ def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
     return decrypted
 
 def main():
+
     interval_keys = {
         'perfect unison'   : 0, 
         'minor second'     : 1, 
@@ -91,8 +95,19 @@ def main():
     section_3 = deque(('Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'))
     section_3.rotate(intervals[0] + intervals[2])
 
-    octave_keys = [list(data[2].rstrip()), list(data[3].rstrip()), list(data[4].rstrip()), list(data[5].rstrip())]
-    notes_list  = [set_notes(list(data[6].rstrip())), set_notes(list(data[7].rstrip())), set_notes(list(data[8].rstrip())), set_notes(list(data[9]))]
+    octave_keys = [
+        list(data[2].rstrip()), 
+        list(data[3].rstrip()), 
+        list(data[4].rstrip()), 
+        list(data[5].rstrip())
+    ]
+
+    notes_list  = [
+        set_notes(list(data[6].rstrip())), 
+        set_notes(list(data[7].rstrip())), 
+        set_notes(list(data[8].rstrip())), 
+        set_notes(list(data[9]))
+    ]
 
     shifted_sections = [list(section_1), list(section_2), list(section_3)]
 
