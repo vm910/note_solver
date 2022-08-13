@@ -3,7 +3,6 @@ import string
 import sys
 
 def set_notes(raw_notes):
-
     notes = []
     i = 0
 
@@ -26,7 +25,6 @@ def find_index(octaves, octave):
     return remainders.index(min(remainders))
 
 def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
-    
     notes_map = { 
         "C"  : 0, 
         "C#" : 1, 
@@ -63,7 +61,6 @@ def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
     return decrypted
 
 def main():
-
     interval_keys = {
         'perfect unison'   : 0, 
         'minor second'     : 1, 
