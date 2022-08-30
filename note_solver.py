@@ -26,23 +26,23 @@ def find_index(octaves, octave):
 
 def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
     notes_map = { 
-        "C"  : 0, 
-        "C#" : 1, 
-        "Db" : 1, 
-        "D"  : 2, 
-        "D#" : 3, 
-        "Eb" : 3, 
-        "E"  : 4, 
-        "F"  : 5, 
-        "F#" : 6, 
-        "Gb" : 6, 
-        "G"  : 7, 
-        "G#" : 8, 
-        "Ab" : 8, 
-        "A"  : 9, 
-        "A#" : 10, 
-        "Bb" : 10, 
-        "B"  : 11 
+        "C"  :  0,
+        "C#" :  1,
+        "Db" :  1,
+        "D"  :  2,
+        "D#" :  3,
+        "Eb" :  3,
+        "E"  :  4,
+        "F"  :  5,
+        "F#" :  6,
+        "Gb" :  6,
+        "G"  :  7,
+        "G#" :  8,
+        "Ab" :  8,
+        "A"  :  9,
+        "A#" : 10,
+        "Bb" : 10,
+        "B"  : 11
     }
     decrypted = []
 
@@ -61,17 +61,17 @@ def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
 
 def main():
     interval_keys = {
-        'perfect unison'   : 0, 
-        'minor second'     : 1, 
-        'major second'     : 2, 
-        'minor third'      : 3, 
-        'major third'      : 4, 
-        'perfect fourth'   : 5, 
-        'diminished fifth' : 6,   
-        'augmented fourth' : 6, 
-        'perfect fifth'    : 7, 
-        'minor sixth'      : 8, 
-        'major sixth'      : 9, 
+        'perfect unison'   :  0, 
+        'minor second'     :  1, 
+        'major second'     :  2, 
+        'minor third'      :  3, 
+        'major third'      :  4, 
+        'perfect fourth'   :  5, 
+        'diminished fifth' :  6,   
+        'augmented fourth' :  6, 
+        'perfect fifth'    :  7, 
+        'minor sixth'      :  8, 
+        'major sixth'      :  9, 
         'minor seventh'    : 10, 
         'major seventh'    : 11, 
         'perfect octave'   : 12
@@ -91,10 +91,25 @@ def main():
     section_3 = deque(('Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'))
     section_3.rotate(intervals[0] + intervals[2])
 
-    octave_keys = [list(data[2].rstrip()), list(data[3].rstrip()), list(data[4].rstrip()), list(data[5].rstrip())]
-    notes_list  = [set_notes(list(data[6].rstrip())), set_notes(list(data[7].rstrip())), set_notes(list(data[8].rstrip())), set_notes(list(data[9]))]
+    octave_keys = [
+        list(data[2].rstrip()),
+        list(data[3].rstrip()),
+        list(data[4].rstrip()),
+        list(data[5].rstrip())
+    ]
 
-    shifted_sections = [list(section_1), list(section_2), list(section_3)]
+    notes_list = [
+        set_notes(list(data[6].rstrip())), 
+        set_notes(list(data[7].rstrip())), 
+        set_notes(list(data[8].rstrip())), 
+        set_notes(list(data[9]))
+    ]
+
+    shifted_sections = [
+        list(section_1),
+        list(section_2),
+        list(section_3)
+    ]
 
     solution = decrypt(octaves, octave_keys, notes_list, shifted_sections)
 
