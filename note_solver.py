@@ -44,6 +44,7 @@ def decrypt(octaves, cipher_octaves, cipher_notes, shifted_sections):
         "Bb" : 10,
         "B"  : 11
     }
+    
     decrypted = []
 
     for notes, octave_key in zip(cipher_notes, cipher_octaves):
@@ -97,11 +98,11 @@ def main():
         list(data[4].rstrip()),
         list(data[5].rstrip())
     ]
-
-    notes_list = [
-        set_notes(list(data[6].rstrip())), 
-        set_notes(list(data[7].rstrip())), 
-        set_notes(list(data[8].rstrip())), 
+    
+    notes_list  = [   
+        set_notes(list(data[6].rstrip())),
+        set_notes(list(data[7].rstrip())),
+        set_notes(list(data[8].rstrip())),
         set_notes(list(data[9]))
     ]
 
